@@ -30,12 +30,6 @@ class String
   end
 end
 
-class String
-  def if_its_not_empty_otherwise(other)
-    empty? ? other : self
-  end
-end
-
 def fizzbuzz_of(num)
   num.to_fizzbuzz.if_its_not_empty_otherwise(num)
 end
