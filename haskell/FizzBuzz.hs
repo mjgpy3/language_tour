@@ -3,11 +3,10 @@ module FizzBuzz where
 divisibleBy :: Integer -> Integer -> Bool
 divisibleBy x = ((==) 0) . (mod x)
 
-separate :: String -> String -> String -> String
-separate sep a b  = a ++ sep ++ b
-
 join :: [String] -> String -> String
-join xs sep = drop 1 $ foldl (separate sep) [] xs
+join [] _ = []
+join [x] _ = x
+join (x:xs) sep = concat [x, sep, join xs sep]
 
 score :: Integer -> String
 score a
