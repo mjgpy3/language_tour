@@ -18,5 +18,4 @@ score a
     divBy3 = a `divisibleBy` 3
     divBy5 = a `divisibleBy` 5
 
--- main = print $ [score i | i <- [1..100]]
 main = putStrLn $ join [score i | i <- [1..100]] "\n"
