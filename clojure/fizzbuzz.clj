@@ -9,10 +9,6 @@
       "Fizz"
       (if (div-by n 5)
         "Buzz"
-        (str n)
-      )
-    )
-  )
-)
+        (str n)))))
 
 (println (join "\n" (map calc-fizzbuzz (range 1 101))))
